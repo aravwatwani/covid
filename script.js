@@ -38,7 +38,7 @@
     .on("end", dragEnded);
 
   d3.queue()
-    .defer(d3.csv, "05-20-2020.csv")
+    .defer(d3.csv, "07-03-2020.csv")
     .await(ready)
 
   function ready(error, datapoints) {
@@ -53,6 +53,7 @@
       .style("fill", function(d) {
         return myColor(d.state);
       })
+
 
     simulation.nodes(datapoints)
       .on("tick", ticked)
